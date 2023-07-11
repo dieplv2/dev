@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.header {
+    background-color: #E7E9EB;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.page-title-name {
+    text-align: center;
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+
+.nav, .topnav{
+    display: flex;
+}
+
+.active {
+    color: red;
+}
+
+.icon {
+    display: none;
+}
+.nav {
+    justify-content: space-between;
+    padding: 12px 10px;
+}
+
+.topnav {
+    gap: 2rem;
+    text-transform: uppercase;
+    font-weight: both;
+}
+.topnav .item {
+    padding: 10px;
+}
+
+.topnav .item a {
+    color: #000;
+    font-weight: bold;
+}
+
+.item:hover a {
+    color: orangered
+}
+
+/* slides */
+
+.slide-item img {
+    width: 100%;
+}
+
+/* cart product */
+
+.cart-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cart-item {
+    border: 1px solid;
+    padding: 8px;
+    width: auto;
+    min-height: auto;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.cart-item:hover {
+    scale: 1.05;
+}
+
+.cart-item img {
+    padding: 3px;
+    width:50%;
+    display: block;
+}
+
+.cart-title::after {
+    content: 'gói Gia Đình';
+    font-size: 10px;
+    padding: 10px;
+    color: red;
+}
+
+.cart-item .price {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orangered;
+}
+
+.cart-item .describe {
+    text-align: left;
+    font-size: 1.03125em;
+}
+
+.btn-call {
+    width: 90%;
+    margin: 0 auto;
+    padding: 7px 12px;
+    display: block;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: both;
+}
+
+.btn-call:hover {
+    background-color: #ff9100;
+}
+
+/* Aciton */
+.action-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-item {
+    min-height: auto;
+    width:50%;
+    max-width: 100%;
+}
+
+.action-item img {
+    width: 100%;
+}
+
+/* .action-list-item */
+
+.action-list-item {
+    width: 100%;
+    max-width: 100%;
+    height: 7.5em;
+    border-bottom: 1px solid;
+    padding: 0 10px 10px 10px;
+    cursor: pointer;
+}
+
+.action-list-item:hover {
+    scale: 1.02;
+}
+
+.action-list-item img{
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    float: left;
+}
+
+.action-list-item .action-title {
+    display: inline;
+    padding-left: 0.625em;
+    color: orangered;
+}
+
+.action-list-item .action-desc {
+    display: block;
+    overflow: hidden;
+    padding-left: 0.625em;
+    font-size: 1.25em;
+    color: #000;
+}
+
+/* Camera */
+
+.cam-list {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.cam-item {
+    border: 1px solid;
+    width: 32%;
+}
+.cam-item:hover {
+    scale: 1.02;
+}
+.cam-item img {
+    width: 100%;
+}
+.cam-title, .cam-desc {
+    padding-left: 10px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-item {
+    width: 32%;
+    border: 1px solid;
+    padding: 20px;
+}
+.footer-item h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.footer-item .link {
+    background-color: #E7E9EB;
+    margin-bottom: 3px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.footer-item .link a {
+    color: #000;
+    font-size: 1.07em;
+}
+
+.footer-item .link:hover {
+    background-color: orangered;
+    color: #fff;
+}
+/* 
+    Reponsive
+*/
+
+@media only screen and (max-width: 922px) {
+    .icon {
+        display: block;
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .reponsive {
+        flex-direction: column;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cart-list {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cart-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cart-item img {
+        padding: 3px;
+        width:35%;
+        display: block;
+    }
+    
+
+    /* action */
+    
+    .action-list-item {
+        height: 3.9em;;
+    }
+
+    .action-list-item .action-title {
+        font-size: 1.2em;
+    }
+
+    .action-list-item .action-desc {
+        display: none;
+    }
+
+    /* cam */
+    .cam-list  {
+        flex-direction: column;
+    }
+    .cam-item {
+        width: 100%;
+       margin-bottom: 20px;
+    }
+
+    /* footer */
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
